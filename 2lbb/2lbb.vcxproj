@@ -127,7 +127,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="keeper_order.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="order.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="exceptions.h" />

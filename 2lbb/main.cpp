@@ -123,7 +123,7 @@ void part2_sentences_max_punct() {
 }
 
 int main() {
-
+    setlocale(LC_ALL, "Russian");
     std::cout << "=== Лабораторная №2 — Вариант 20: ORDER ===\n";
     std::cout << "Версия программы: 1.0\n";
     int top = -1;
