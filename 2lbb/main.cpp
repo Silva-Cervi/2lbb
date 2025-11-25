@@ -3,6 +3,7 @@
 #include <string>
 #include <cctype>
 #include <vector>
+#include <iomanip>
 #include "keeper_order.h"
 #include "exceptions.h"
 
@@ -84,7 +85,9 @@ void part1_interactive() {
                 std::string payer; std::cout << "Введите расчетный счет плательщика: "; std::getline(std::cin, payer);
                 double sum = 0.0;
                 if (ko.sumByPayer(payer, sum)) {
-                    std::cout << "Сумма списаний с " << payer << " = " << sum << " руб.\n";
+                    std::cout << "Сумма списаний с " << payer << " = "
+                        << std::fixed << std::setprecision(2) << sum << " руб.\n";
+                    std::cout.unsetf(std::ios_base::floatfield);
                 }
                 else {
                     std::cout << "Расчетного счета " << payer << " не найдено.\n";
